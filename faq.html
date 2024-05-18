@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        background-image: url(https://rare-gallery.com/mocahbig/1377866-codm-game-s10-templar-unredeemed-call-of-duty-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 600px;
+
+    }
+  .accordion {
+    background-color: #f4f4f4;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .Frequently {
+    color: #fdfbfb;
+  }
+  
+</style>
+</head>
+<body>
+    <header>
+        <h1>faq</h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hall</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<h2 class="Frequently">Frequently Asked Questions</h2>
+<p class="Frequently">1.</p>
+<button class="accordion">What are your services?</button>
+<div class="panel">
+  <p>We offer a range of services including web development, mobile app development, graphic design, and digital marketing.</p>
+</div>
+<p class="Frequently">2.</p>
+<button class="accordion">What is your pricing model?</button>
+<div class="panel">
+  <p>Our pricing varies depending on the scope and complexity of the project. We offer both fixed-price and hourly-rate options. Please contact us for a personalized quote.</p>
+</div>
+<p class="Frequently">3.</p>
+<button class="accordion">What is your process?</button>
+<div class="panel">
+  <p>Our process typically involves the following stages: consultation & planning, design & development, testing & revisions, and deployment. We prioritize clear communication and client involvement throughout the process.</p>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+</script>
+
+</body>
+</html>
